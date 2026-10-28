@@ -1,0 +1,95 @@
+/* ── NEXO Messenger design tokens ─────────────────────────────────── */
+
+:root {
+  /* Base palette — almost-black with cool undertone */
+  --bg: #050507;
+  --bg-elevated: #0b0b10;
+
+  /* Glass surfaces */
+  --glass: rgba(255, 255, 255, 0.045);
+  --glass-hover: rgba(255, 255, 255, 0.075);
+  --glass-strong: rgba(255, 255, 255, 0.09);
+  --glass-blur: saturate(150%) blur(20px);
+
+  /* Borders & reflections */
+  --stroke: rgba(255, 255, 255, 0.085);
+  --stroke-strong: rgba(255, 255, 255, 0.16);
+  --sheen: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  /* Text */
+  --text: #f2f3f7;
+  --text-dim: #a9adba;
+  --text-faint: #6d7280;
+
+  /* Accent — subtle periwinkle light */
+  --accent: #8b97ff;
+  --accent-2: #5eead4;
+  --accent-soft: rgba(139, 151, 255, 0.16);
+  --accent-glow: rgba(139, 151, 255, 0.35);
+  --on-accent: #0a0a12;
+
+  /* Semantic */
+  --success: #5ad98f;
+  --warning: #e8c268;
+  --danger: #ff6b74;
+  --danger-soft: rgba(255, 107, 116, 0.14);
+
+  /* Bubbles */
+  --bubble-me: linear-gradient(135deg, rgba(139, 151, 255, 0.28), rgba(139, 151, 255, 0.16));
+  --bubble-me-stroke: rgba(139, 151, 255, 0.32);
+  --bubble-them: rgba(255, 255, 255, 0.055);
+
+  /* Radii */
+  --r-xl: 26px;
+  --r-lg: 20px;
+  --r-md: 14px;
+  --r-sm: 10px;
+  --r-pill: 999px;
+
+  /* Shadows */
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.55);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
+
+  /* Typography */
+  --font:
+    'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --fs-xs: 0.72rem;
+  --fs-sm: 0.82rem;
+  --fs-md: 0.92rem;
+  --fs-lg: 1.08rem;
+  --fs-xl: 1.4rem;
+  --fs-2xl: 1.9rem;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-fast: 140ms;
+  --t-med: 260ms;
+
+  /* Layout */
+  --rail-w: 78px;
+  --bottomnav-h: calc(60px + env(safe-area-inset-bottom, 0px));
+  --header-h: 60px;
+}
+
+/* ── Theme: Midnight — deeper, less transparent ───────────────────── */
+[data-theme='midnight'] {
+  --glass: rgba(20, 22, 34, 0.55);
+  --glass-hover: rgba(28, 31, 46, 0.65);
+  --glass-strong: rgba(32, 36, 54, 0.75);
+  --glass-blur: saturate(130%) blur(12px);
+  --bubble-them: rgba(255, 255, 255, 0.05);
+}
+
+/* ── Theme: Pure Black — opaque AMOLED, no blur ───────────────────── */
+[data-theme='black'] {
+  --bg: #000000;
+  --bg-elevated: #070709;
+  --glass: #0c0c10;
+  --glass-hover: #131318;
+  --glass-strong: #17171d;
+  --glass-blur: none;
+  --stroke: rgba(255, 255, 255, 0.1);
+  --bubble-them: #131318;
+}
